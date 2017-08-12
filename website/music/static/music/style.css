@@ -1,0 +1,17 @@
+body{
+    background: white url("images/bg.jpg");
+}
+.navbar{
+    border-radius:0 ;
+}
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+}
+
+
+.img-container{
+    max-height: 150px;
+    overflow: hidden;
+
+}

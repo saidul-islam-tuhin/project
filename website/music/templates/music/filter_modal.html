@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'music:filter_song' %}" method="post" style="display: inline;">
+                    {% csrf_token %}
+                    <h6>Sorted By :</h6>
+                    <label for="like_id" class="control-label col-sm-4 ">
+                         <input id="like_id" type="radio" name="filter" value="-like"/>
+                        Popular
+                    </label>
+                    <label for="date_id" class="control-label col-sm-4">
+                        <input id="date_id" type="radio" name="filter" value="-upload_date"/>
+                        Update
+                    </label>
+                    <hr>
+                    <h6>Catagory :</h6>
+                    <label for="bangla_id" class="control-label col-sm-4 ">
+                        <input id="banlga_id" type="radio" name="genere" value="bangla"/>
+                        Bangla
+                    </label>
+                    <label for="english_id" class="control-label col-sm-4">
+                        <input id="english_id" type="radio" name="genere" value="english"/>
+                        English
+                    </label>
+                    <label for="hindi_id" class="control-label col-sm-4">
+                        <input id="hindi_id" type="radio" name="genere" value="hindi"/>
+                        Hindi
+                    </label>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
